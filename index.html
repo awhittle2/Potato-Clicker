@@ -3,6 +3,17 @@
 <script>
   var potatoCount = 0 // Stores variable for potatoes
   var autoClick = 0 // Stores variable for autoclicker
+
+  function update() {
+
+  }
+
+  function timer() {
+    potatoCount = potatoCount + autoClick;
+    update()
+  }
+
+  setInterval(timer, 1000)
 </script>
 
 <html lang="en">
@@ -27,9 +38,9 @@
 </head>
 <body>
   <audio src="lobby.mp3" autoplay></audio>
+
   <div class = "potato-class">
     <audio id="sound1" src="pop.mp3" preload="auto"></audio><a href="#" onclick="document.getElementById('sound1').play(); add()"><img src="potato.png"></a>
-
     <div class="counter">
       <h1>YOU GOT:</h1>
       <input type="text" id="text" disabled style="text-align:center;">
@@ -40,20 +51,29 @@
       <button type="button" class="btn btn-outline-light"><a href="#" onClick="load()">Load</a></button>
     </div>
     <div class="shop">
-      <h1 id="shop-title">SHOP</h1>
-      <ul>
-        <li><h3>Mystery Recipe 1</h3></li>
-        <li><h3>Mystery Recipe 2</h3></li>
-        <li><h3>Mystery Recipe 3</h3></li>
-        <li><h3>Mystery Recipe 4</h3></li>
-        <li><h3>Mystery Recipe 5</h3></li>
-        <li><h3>Mystery Recipe 6</h3></li>
-        <li><h3>Mystery Recipe 7</h3></li>
-        <li><h3>Mystery Recipe 8</h3></li>
-        <li><h3>Mystery Recipe 9</h3></li>
-        <li><h3>Mystery Recipe 10</h3></li>
-        <br>
-      </ul>
+      <h1 id="shop-title">Shop</h1>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <h3>Auto Clicker</h3>
+          </div>
+          <div class="col-md-3">
+            <h3>Recipe 1</h3>
+          </div>
+          <div class="col-md-3">
+            <h3>Recipe 2</h3>
+          </div>
+          <div class="col-md-3">
+            <h3>Recipe 3</h3>
+          </div>
+          <div class="col-md-3">
+            <h3>Recipe 4</h3>
+          </div>
+          <div class="col-md-3">
+            <h3>Recipe 5</h3>
+          </div>
+        </div>
+      </div>
       <div class="potato-info">
         <h1>Why should you eat potatoes?</h1>
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
@@ -98,7 +118,6 @@
 
   function save() { // Saves the potato count to local storage
       localStorage.setItem("potatoCount", potatoCount)
-
   }
 
   function load() { // Loads the potato count back into the game
@@ -115,8 +134,7 @@
 
   }
 
-    // never used
-  function playSound(){
+  function playSound() {
     var snd = newAudio("pop.mp3");
     snd.play();
     snd.currentTime=0;
