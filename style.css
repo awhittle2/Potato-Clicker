@@ -2,8 +2,14 @@ body {
     background-color: #CC9544;
 }
 
+.container {
+    margin: auto auto;
+}
+
 .potato {
     cursor: pointer;
-    padding: 3.5rem 10rem 3.5rem 10rem;
-    width: 25%;
+}
+
+.title {
+    text-align: center;
 }
