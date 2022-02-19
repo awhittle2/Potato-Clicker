@@ -1,0 +1,9 @@
+body {
+    background-color: #CC9544;
+}
+
+.potato {
+    cursor: pointer;
+    padding: 3.5rem 10rem 3.5rem 10rem;
+    width: 25%;
+}
