@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<script>
+  var potatoCount = 0
+</script>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,20 +19,23 @@
 
 </head>
 <body>
+  <div class = "potato-class">
+    <a href="#" onclick="add()"><img src="potato.png"></a>
     <div class="container">
-        <div class="row">
-          <div class="col-sm-6 potato-container">
-            <img class="potato" src="potato.png">
-          </div>
-          <div class="col-sm-6 title-container">
-            <h1 class = "title">Stop eating ramen noodles,
-                instead eat potatoes!</h1>
-              <br>
-              <div class="start-button">
-                <button type="button" onclick="startGame()" id="btn" class="btn btn-outline-light btn-lg">Start</button>
-              </div>
-          </div>
-        </div>
-      </div>
+      <h1>YOU GOT:</h1>
+      <input type="text" id="text" disabled style="text-align:center;">
+      <h1>POTATES</h1>
+      <button type="button" class="btn btn-outline-light">Back</button>
+      <button type="button" class="btn btn-outline-light">Save</button>
+      <button type="button" class="btn btn-outline-light">Reset</button>
+      <button type="button" class="btn btn-outline-light">Load</button>
+      <script>
+        function add() {
+          potatoCount = potatoCount + 1
+          document.getElementById('text').value = potatoCount
+        }
+      </script>
+    </div>
+  </div>
 </body>
 </html>
