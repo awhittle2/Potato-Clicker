@@ -21,21 +21,43 @@
 <body>
   <div class = "potato-class">
     <a href="#" onclick="add()"><img src="potato.png"></a>
-    <div class="container">
+    <div class="counter">
       <h1>YOU GOT:</h1>
       <input type="text" id="text" disabled style="text-align:center;">
       <h1>POTATES</h1>
-      <button type="button" class="btn btn-outline-light">Back</button>
-      <button type="button" class="btn btn-outline-light">Save</button>
-      <button type="button" class="btn btn-outline-light">Reset</button>
-      <button type="button" class="btn btn-outline-light">Load</button>
-      <script>
-        function add() {
-          potatoCount = potatoCount + 1
-          document.getElementById('text').value = potatoCount
-        }
-      </script>
+      <button type="button" class="btn btn-outline-light"><a href="#" onClick="back()">Back</a></button>
+      <button type="button" class="btn btn-outline-light"><a href="#" onClick="save()">Save</a></button>
+      <button type="button" class="btn btn-outline-light"><a href="#" onClick="reset()">Reset</a></button>
+      <button type="button" class="btn btn-outline-light"><a href="#" onClick="load()">Load</a></button>
+    </div>
+    <div class="shop">
+      <h1>SHOP</h1>
     </div>
   </div>
 </body>
 </html>
+
+<script>
+  function add() { // Adds to the potato count
+    potatoCount = potatoCount + 1
+    document.getElementById('text').value = potatoCount
+  }
+
+  function save() { // Saves the potato count to local storage
+      localStorage.setItem("potatoCount", potatoCount)
+  }
+
+  function load() { // Loads the potato count back into the game
+      potatoCount = localStorage.getItem("potatoCount")
+      potatoCount = parseInt(potatoCount)
+      document.getElementById('text').value = potatoCount
+  }
+
+  function reset() {
+
+  }
+
+  function back() {
+
+  }
+</script>
