@@ -1,7 +1,10 @@
 <!DOCTYPE html>
+
 <script>
-  var potatoCount = 0
+  var potatoCount = 0 // Stores variable for potatoes
+  var autoClick = 0 // Stores variable for autoclicker
 </script>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -31,7 +34,34 @@
       <button type="button" class="btn btn-outline-light"><a href="#" onClick="load()">Load</a></button>
     </div>
     <div class="shop">
-      <h1>SHOP</h1>
+      <h1 id="shop-title">SHOP</h1>
+      <ul>
+        <li><h2>Autoclicker</h2></li>
+      </ul>
+      <div class="potato-info">
+        <h1>Why should you eat potatoes?</h1>
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <h2>Improve health</h2>
+            </div>
+            <div class="carousel-item">
+              <h2>Improve diet</h2>
+            </div>
+            <div class="carousel-item">
+              <h2>Become healthy</h2>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </body>
