@@ -1,15 +1,23 @@
 body {
-    background-color: #CC9544;
+    background-color: #876445;
 }
 
 .container {
-    margin: auto auto;
+    height: 100%;
 }
 
 .potato {
     cursor: pointer;
+    padding-top: 10rem;
 }
 
 .title {
+    color: white;
+    padding: 15rem 3rem 3rem 3rem;
+    text-align: center;
+}
+
+.start-button {
+    padding: 0 auto;
     text-align: center;
 }
