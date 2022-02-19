@@ -26,8 +26,10 @@
 
 </head>
 <body>
+  <audio src="lobby.mp3" autoplay></audio>
   <div class = "potato-class">
-    <a href="#" onclick="add()"><img src="potato.png"></a>
+    <audio id="sound1" src="pop.mp3" preload="auto"></audio><a href="#" onclick="document.getElementById('sound1').play(); add()"><img src="potato.png"></a>
+
     <div class="counter">
       <h1>YOU GOT:</h1>
       <input type="text" id="text" disabled style="text-align:center;">
@@ -89,10 +91,14 @@
   function add() { // Adds to the potato count
     potatoCount = potatoCount + 1
     document.getElementById('text').value = potatoCount
+    var snd = newAudio("pop.mp3");
+    snd.play();
+    snd.currentTime=0;
   }
 
   function save() { // Saves the potato count to local storage
       localStorage.setItem("potatoCount", potatoCount)
+
   }
 
   function load() { // Loads the potato count back into the game
@@ -107,5 +113,12 @@
 
   function back() {
 
+  }
+
+    // never used
+  function playSound(){
+    var snd = newAudio("pop.mp3");
+    snd.play();
+    snd.currentTime=0;
   }
 </script>
