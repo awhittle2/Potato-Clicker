@@ -16,6 +16,16 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    color: black;
+}
+
+.buy:hover {
+    border-style: solid;
+    border-color: white;
+    color: white;
+}
+
 .counter {
     color: white;
     display: inline-block;
