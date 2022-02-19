@@ -1,16 +1,36 @@
 body {
-    background-color: #4A3933;
+    background-color: #694E4E;
 }
 
 img {
-    padding: 10rem 5rem 5rem 10rem;
+    padding: 3rem 3rem 5rem 25.7rem;
 }
 
-.container {
+a {
     color: white;
-    position: relative;
+    text-decoration: none;
+}
+
+.counter {
+    color: white;
+    display: inline-block;
+    height: 12.5rem;
+    width: 20rem;
+    border-style: solid;
+    border-color: white;
     text-align: center;
-    bottom: 30rem;
-    left: 15rem;
+    position: relative;
+    top: 32.5rem;
+    right: 25rem;
+}
+
+.shop {
+    background-color: #886F6F;
+    color: white;
+    display: inline-block;
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    text-align: center;
 }
 
