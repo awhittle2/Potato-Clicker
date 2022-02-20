@@ -44,7 +44,7 @@
     <div class="counter">
       <h1>YOU GOT:</h1>
       <input type="text" id="text" disabled style="text-align:center;">
-      <h1>POTATES</h1>
+      <h1>POTATOES</h1>
       <button type="button" class="btn btn-outline-light"><a href="#" onClick="back()">Back</a></button>
       <button type="button" class="btn btn-outline-light"><a href="#" onClick="save()">Save</a></button>
       <button type="button" class="btn btn-outline-light"><a href="#" onClick="reset()">Reset</a></button>
@@ -58,19 +58,19 @@
             <h3>Auto Clicker</h3>
           </div>
           <div class="col-md-3">
-            <h3>Recipe 1</h3>
+            <a href="recipe-1.html" onclick="reducePotato(50); save(); return confirm('50 potates have been deducted. Proceed to recipe 1~');"><h3>Recipe 1</h3></a>
           </div>
           <div class="col-md-3">
-            <h3>Recipe 2</h3>
+            <a href="recipe-2.html" onclick="reducePotato(100); save(); return confirm('100 potates have been deducted. Proceed to recipe 2~');"><h3>Recipe 2</h3></a>
           </div>
           <div class="col-md-3">
-            <h3>Recipe 3</h3>
+            <a href="recipe-3.html" onclick="reducePotato(150); save(); return confirm('150 potates have been deducted. Proceed to recipe 3~');"><h3>Recipe 3</h3></a>
           </div>
           <div class="col-md-3">
-            <h3>Recipe 4</h3>
+            <a href="recipe-4.html" onclick="reducePotato(200); save(); return confirm('200 potates have been deducted. Proceed to recipe 4~');"><h3>Recipe 4</h3></a>
           </div>
           <div class="col-md-3">
-            <h3>Recipe 5</h3>
+            <a href="recipe-5.html" onclick="reducePotato(250); save(); return confirm('250 potates have been deducted. Proceed to recipe 5~');"><h3>Recipe 5</h3></a>
           </div>
         </div>
       </div>
@@ -108,6 +108,9 @@
 </html>
 
 <script>
+
+load();
+
   function add() { // Adds to the potato count
     potatoCount = potatoCount + 1
     document.getElementById('text').value = potatoCount
@@ -128,6 +131,14 @@
 
   function reset() {
 
+      potatoCount = 0;
+      document.getElementById('text').value = potatoCount
+
+  }
+
+  function reducePotato(value){
+      potatoCount = potatoCount - value;
+      document.getElementById('text').value = potatoCount
   }
 
   function back() {
@@ -139,4 +150,6 @@
     snd.play();
     snd.currentTime=0;
   }
+
+  
 </script>
