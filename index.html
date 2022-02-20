@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 
 <script>
+  function update(){
+    document.getElementById('text').value = potatoCount
+    document.getElementById('amountAutoClick').innerHTML = "You own " + autoClick + " Auto Clickers";
+    document.getElementById('costAutoClick').innerHTML = ((autoClick+1) * 15 ) + " Potatoes";
+  }
   var potatoCount = 0 // Stores variable for potatoes
   var autoClick = 0 // Stores variable for autoclicker
 
-  function update() {
-
-  }
-
-  function timer() {
-    potatoCount = potatoCount + autoClick;
-    update()
+  function timer(){
+      potatoCount = potatoCount + autoClick;
+      update()
   }
 
   setInterval(timer, 1000)
@@ -49,14 +50,16 @@
       <button type="button" class="btn btn-outline-light"><a href="#" onClick="save()">Save</a></button>
       <button type="button" class="btn btn-outline-light"><a href="#" onClick="reset()">Reset</a></button>
       <button type="button" class="btn btn-outline-light"><a href="#" onClick="load()">Load</a></button>
+      <br><br>
+      <button type="button" class="btn btn-outline-light"><a href="#" onClick="buyAutoClicker()">Buy auto clicker</a></button>
+      <p id="costAutoClick"> 15 Potatoes</p>
+      <p id="amountAutoClick"> You own 0 Auto Clickers</p>
     </div>
+
     <div class="shop">
       <h1 id="shop-title">Shop</h1>
       <div class="container">
         <div class="row">
-          <div class="col-md-3">
-            <h3>Auto Clicker</h3>
-          </div>
           <div class="col-md-3">
             <a href="recipe-1.html" onclick="reducePotato(50); save(); return confirm('50 potates have been deducted. Proceed to recipe 1~');"><h3>Recipe 1</h3></a>
           </div>
@@ -113,7 +116,7 @@ load();
 
   function add() { // Adds to the potato count
     potatoCount = potatoCount + 1
-    document.getElementById('text').value = potatoCount
+    update()
     var snd = newAudio("pop.mp3");
     snd.play();
     snd.currentTime=0;
@@ -121,24 +124,37 @@ load();
 
   function save() { // Saves the potato count to local storage
       localStorage.setItem("potatoCount", potatoCount)
+      localStorage.setItem("autoClick", autoClick)
   }
 
   function load() { // Loads the potato count back into the game
       potatoCount = localStorage.getItem("potatoCount")
       potatoCount = parseInt(potatoCount)
+      
+      autoClick = localStorage.getItem("autoClick");
+      autoClick = parseInt(autoClick);
+
       document.getElementById('text').value = potatoCount
+      
   }
 
-  function reset() {
-
+  function reset() { // resets potato count to 0
       potatoCount = 0;
-      document.getElementById('text').value = potatoCount
-
+      autoClick = 0;
+      update()
   }
 
   function reducePotato(value){
       potatoCount = potatoCount - value;
       document.getElementById('text').value = potatoCount
+  }
+
+  function buyAutoClicker(){
+      if (potatoCount >= ((autoClick+1) * 15)){ // check if player has more potatoes than cost of ac
+          potatoCount -= ((autoClick+1) * 15) // remove 15 potatoes
+          autoClick = autoClick + 1;
+      }
+      update()
   }
 
   function back() {
