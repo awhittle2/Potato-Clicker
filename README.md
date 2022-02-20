@@ -1,1 +1,4 @@
-# Stormhacks-2022
+# Potato Clicker
+By Hot Potatoes
+
+### Introduction
