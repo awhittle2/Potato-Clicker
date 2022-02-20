@@ -13,14 +13,7 @@
       potatoCount = potatoCount + autoClick;
       update()
   }
-  
-  load();
-
-  if (potatoCount == NaN)
-  {
-    potatoCount = 0;
-    autoClick = 0;
-  }
+ 
 
   setInterval(timer, 1000)
 </script>
@@ -119,6 +112,8 @@
 </html>
 
 <script>
+  
+  load();
 
   function add() { // Adds to the potato count
     potatoCount = potatoCount + 1
