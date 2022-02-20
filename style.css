@@ -53,6 +53,7 @@ a:hover {
 
 #shop-title {
     text-decoration: underline;
+    padding-bottom: 1em;
 }
 
 .potato-info {
@@ -77,4 +78,8 @@ a:hover {
 
 .why-potato {
     text-align: left;
+}
+
+#potato-title {
+    padding-top: 1em;
 }
