@@ -73,3 +73,7 @@ a:hover {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+
+.why-potato {
+    text-align: left;
+}
