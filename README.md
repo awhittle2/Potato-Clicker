@@ -1,7 +1,6 @@
 # Potato Clicker
 By Hot Potatoes
 
-![potatoman](https://user-images.githubusercontent.com/89437956/154831883-fa86c4f2-66f2-4625-a0df-0df69acaae30.png)
 
 
 ### Introduction
