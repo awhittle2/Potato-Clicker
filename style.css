@@ -48,7 +48,7 @@ a:hover {
     width: 40%;
     height: 100%;
     text-align: center;
-    padding: 3rem 3rem 0 3rem;
+    right: 0;
 }
 
 #shop-title {
@@ -82,4 +82,12 @@ a:hover {
 
 #potato-title {
     padding-top: 1em;
+}
+
+.recipes {
+    padding-bottom: 1.5em;
+}
+
+.recipe-img {
+    padding: 10rem 0 0 10rem;
 }
