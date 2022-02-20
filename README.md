@@ -1,6 +1,9 @@
 # Potato Clicker
 By Hot Potatoes
 
+![potatoman](https://user-images.githubusercontent.com/89437956/154831883-fa86c4f2-66f2-4625-a0df-0df69acaae30.png)
+
+
 ### Introduction
 
 Potato Clicker is a simple and yet entertaining web-based game that introduces users to a wide range of cooking recipes involving potatoes. 
@@ -14,7 +17,7 @@ The website is best suitable for desktop users. It is accessible by mobile users
 
 ### FAQ
 
-**What do I do if my potato count is stuck at NaN?**
+**What do I do if my potato count is stuck at *NaN*? **
 
 * Answer: Press Reset.
 
