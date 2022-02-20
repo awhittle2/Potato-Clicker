@@ -20,7 +20,7 @@ The website is best suitable for desktop users. It is accessible by mobile users
 
 ### FAQ
 
-**What do I do if my potato count is stuck at *NaN*? **
+**What do I do if my potato count is stuck at *NaN*?**
 
 * Answer: Press Reset.
 
